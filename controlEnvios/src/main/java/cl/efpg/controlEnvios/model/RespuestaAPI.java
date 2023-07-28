@@ -1,4 +1,4 @@
-package cl.efpg.controlEnvios.modelos;
+package cl.efpg.controlEnvios.model;
 
 import java.time.LocalDateTime;
 

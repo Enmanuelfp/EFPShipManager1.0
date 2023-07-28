@@ -1,4 +1,4 @@
-package cl.efpg.controlEnvios.controladores;
+package cl.efpg.controlEnvios.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cl.efpg.controlEnvios.modelos.RespuestaAPI;
+import cl.efpg.controlEnvios.model.RespuestaAPI;
 
 @RestController
 @RequestMapping(path = "/api", produces = MediaType.APPLICATION_JSON_VALUE)

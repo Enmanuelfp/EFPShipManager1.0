@@ -1,4 +1,4 @@
-package cl.efpg.controlEnvios.controladores;
+package cl.efpg.controlEnvios.controller;
 
 import java.util.Optional;
 

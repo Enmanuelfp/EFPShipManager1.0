@@ -21,6 +21,7 @@
 
     <!-- Cuerpo -->
     <body>
+    <%@include file = "navbar.jsp" %>
         <h1>Hola mundo!</h1>
         <p>
             Bienenidos sean todos!

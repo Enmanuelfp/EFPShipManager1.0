@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.http.HttpStatus;
 
+import cl.efpg.controlEnvios.model.RespuestaAPI;
+
 class RespuestaAPITest {
 
     private HttpStatus httpStatus;
