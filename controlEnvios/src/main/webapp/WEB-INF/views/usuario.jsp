@@ -60,20 +60,26 @@
             <th>Número Telefónico</th>
             <th>Tipo de Usuario</th>
         </tr>
-        <%-- Aquí se debe escribir el código Java para obtener los datos de la base de datos y mostrarlos en la tabla --%>
-        <%-- Por simplicidad, aquí solo se muestra un ejemplo estático --%>
+         <%
+         @SuppressWarnings("unchecked")
+         List<Usuario> usuarios = (List<Usuario>) request.getAttribute("Usuarios");
+         for ( Usuario u : usuarios){
+         %>
+         
         <tr>
-            <td>1</td>
-            <td>Juan</td>
-            <td>Pérez</td>
-            <td>12345678-9</td>
-            <td>30</td>
-            <td>Av. Libertad 123</td>
-            <td>juan@example.com</td>
-            <td>912345678</td>
-            <td>Cliente</td>
+            <td><% u.getId(); %></td>
+            <td><%u.getNombre(); %></td>
+            <td><%u.getApellido(); %></td>
+            <td><%u.getRun(); %></td>
+            <td><%u.getEdad(); %></td>
+            <td><%u.getDireccion(); %></td>
+            <td><%u.getCorreoElectronico(); %></td>
+            <td><%u.getNumeroTelefononico(); %></td>
+            <td><%u.getTipoUsuario(); %></td>
         </tr>
+        <% } %>
     </table>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
 </body>
 
