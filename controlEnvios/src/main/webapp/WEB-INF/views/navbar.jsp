@@ -14,7 +14,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <!-- Logo o nombre de la empresa a la izquierda -->
-    <a class="navbar-brand" href="#">Servinmed Envios</a>
+    <a class="navbar-brand" href="#">EFPShipManager1.0</a>
 
     <!-- Botón que aparecerá en dispositivos pequeños para desplegar el menú -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

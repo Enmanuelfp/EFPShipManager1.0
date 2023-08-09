@@ -1,11 +1,11 @@
-package cl.efpg.controlEnvios.service;
+package cl.efpg.controlEnvios.model.service;
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.efpg.controlEnvios.entity.Usuario;
-import cl.efpg.controlEnvios.repository.IUsuarioRepository;
+import cl.efpg.controlEnvios.model.entity.Usuario;
+import cl.efpg.controlEnvios.model.repository.IUsuarioRepository;
 
 @Service
 public class UsuarioService {

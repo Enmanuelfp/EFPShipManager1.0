@@ -1,4 +1,4 @@
-package cl.efpg.controlEnvios.entity;
+package cl.efpg.controlEnvios.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
