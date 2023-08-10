@@ -4,13 +4,14 @@ import java.util.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "cliente") // Mapeo a la tabla "cliente"
 public class Cliente extends Usuario {
     
-    @Id
+    
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected int idCliente; 
     

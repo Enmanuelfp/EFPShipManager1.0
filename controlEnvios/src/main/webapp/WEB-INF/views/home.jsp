@@ -26,6 +26,7 @@
         <p>
             Bienenidos sean todos!
         </p>
+        <%@include file = "footer.jsp" %>
     </body>
     <!-- /Cuerpo -->
 </html>

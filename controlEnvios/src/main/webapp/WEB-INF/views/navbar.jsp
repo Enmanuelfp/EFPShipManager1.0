@@ -8,12 +8,14 @@
   <title>Navbar con Bootstrap</title>
   <!-- Agrega el enlace a la hoja de estilos de Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/navbar.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
     <!-- Logo o nombre de la empresa a la izquierda -->
+    
     <a class="navbar-brand" href="#">EFPShipManager1.0</a>
 
     <!-- Botón que aparecerá en dispositivos pequeños para desplegar el menú -->

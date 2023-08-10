@@ -4,13 +4,14 @@ import java.util.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
 
 @Entity
+@Table(name = "repartidor") // Mapeo a la tabla "repartidor"
 public class Repartidor extends Usuario {
     
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected int idRepartidor;  // Cambiado a Long
     

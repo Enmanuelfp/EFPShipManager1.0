@@ -1,0 +1,10 @@
+body {
+      margin: 0; /* Elimina los márgenes en el cuerpo del documento */
+      padding: 0; /* Elimina el relleno en el cuerpo del documento */
+    }
+
+    .navbar {
+      margin-top: 0; /* Elimina el margen superior de la barra de navegación */
+      margin-bottom: 0; /* Elimina el margen inferior de la barra de navegación */
+      border-radius: 0; /* Elimina la curva de los bordes de la barra de navegación */
+    }

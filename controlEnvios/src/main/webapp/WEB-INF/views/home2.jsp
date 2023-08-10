@@ -23,7 +23,7 @@
     <body>
         <h1>Hola mundo!</h1>
         <p>
-            Bienenidos sean todos! En especial tú, ${nombre}!
+            Bienenidos sean todos! En especial tú, ${Enmanuel}!
         </p>
     </body>
     <!-- /Cuerpo -->
