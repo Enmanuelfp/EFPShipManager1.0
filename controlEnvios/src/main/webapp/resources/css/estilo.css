@@ -1,14 +1,103 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+          body {
+            font-family: 'Arial', sans-serif;
+        }
 
-body {
-    padding: 1rem;
-}
+        .jumbotron {
+            background-image: url('img/fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
 
-h1 {
-    color: blue;
-    margin-bottom: 0.25rem;
-}
+        .jumbotron h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333; /* Cambio de color de título */
+        }
+
+        .jumbotron p {
+            font-size: 1.8rem;
+            opacity: 0.8;
+            color: #555; /* Cambio de color de texto */
+        }
+
+        .jumbotron a.btn {
+            font-size: 1.8rem;
+            padding: 15px 40px;
+            border-radius: 5px;
+            background-color: #0072ff;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .jumbotron a.btn:hover {
+            background-color: #0055b5;
+        }
+
+        .feature-icon {
+            font-size: 5rem;
+            color: #0072ff;
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #0072ff;
+            margin-right: 15px;
+        }
+
+        .service-list li {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-list li i {
+            margin-right: 10px;
+        }
+
+        .cta-section {
+            background-color: #f8f9fa;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .cta-section p {
+            font-size: 1.6rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .cta-section a.btn {
+            font-size: 1.6rem;
+            padding: 15px 40px;
+            border-radius: 5px;
+            background-color: #0072ff;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cta-section a.btn:hover {
+            background-color: #0055b5;
+        }  

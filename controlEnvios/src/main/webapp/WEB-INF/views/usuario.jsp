@@ -74,13 +74,47 @@
             <td><%u.getEdad(); %></td>
             <td><%u.getDireccion(); %></td>
             <td><%u.getCorreoElectronico(); %></td>
-            <td><%u.getNumeroTelefononico(); %></td>
+            <td><%u.getNumeroTelefonico(); %></td>
             <td><%u.getTipoUsuario(); %></td>
         </tr>
         <% } %>
     </table>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+    <script>
+        const tipoUsuarioSelect = document.getElementById("tipoUsuario");
+        const camposUsuario = document.getElementById("camposUsuario");
+        const camposRepartidor = document.getElementById("camposRepartidor");
+        const camposCliente = document.getElementById("camposCliente");
+
+        tipoUsuarioSelect.addEventListener("change", function() {
+            camposUsuario.style.display = "none";
+            camposRepartidor.style.display = "none";
+            camposCliente.style.display = "none";
+
+            const tipoUsuario = tipoUsuarioSelect.value;
+
+            if (tipoUsuario === "usuario") {
+                camposUsuario.style.display = "block";
+            } else if (tipoUsuario === "repartidor") {
+                camposRepartidor.style.display = "block";
+            } else if (tipoUsuario === "cliente") {
+                camposCliente.style.display = "block";
+            }
+        });
+
+        function mostrarAlerta() {
+            Swal.fire({
+                icon: 'success',
+                title: '¡Enviado!',
+                text: '¡Los datos han sido enviados correctamente!',
+                timer: 4000,
+                showConfirmButton: false,
+                width: 300,
+                heightAuto: false
+            });
+        }
+    </script>
 </body>
 
 

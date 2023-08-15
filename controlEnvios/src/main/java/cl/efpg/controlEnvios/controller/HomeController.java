@@ -53,7 +53,7 @@ public class HomeController {
         }
 
         // Mostrar página
-        return "home";
+        return "index";
     }
     
     @RequestMapping(path = "/index", method = RequestMethod.GET)
@@ -74,6 +74,27 @@ public class HomeController {
     public ModelAndView goHome() {  
 
         return new ModelAndView("home");
+		
+    }
+    
+    @RequestMapping(path = "/login", method = RequestMethod.GET)
+    public ModelAndView goLogin() {  
+
+        return new ModelAndView("login");
+		
+    }
+    
+    @RequestMapping(path = "/contacto", method = RequestMethod.GET)
+    public ModelAndView goContacto() {  
+
+        return new ModelAndView("contacto");
+		
+    }
+    
+    @RequestMapping(path = "/contactoportafolio", method = RequestMethod.GET)
+    public ModelAndView goContactoPortafolio() {  
+
+        return new ModelAndView("contactoportafolio");
 		
     }
 

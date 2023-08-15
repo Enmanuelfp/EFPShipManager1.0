@@ -24,7 +24,7 @@ public class UsuarioService {
 		return uRepo.getOne(id);
 	}
 	
-	public void create(Usuario u) {
+	public void  create(Usuario u) {
 		uRepo.save(u);
 	}
 	

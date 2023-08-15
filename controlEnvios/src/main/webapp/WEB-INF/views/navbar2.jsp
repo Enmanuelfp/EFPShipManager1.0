@@ -33,12 +33,6 @@
         <li class="nav-item">
           <a class="nav-link" href="contacto">Contacto</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Registro</a>
-        </li>
       </ul>
     </div>
   </div>

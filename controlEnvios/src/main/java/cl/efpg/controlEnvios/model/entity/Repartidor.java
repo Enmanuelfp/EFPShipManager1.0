@@ -1,33 +1,36 @@
 package cl.efpg.controlEnvios.model.entity;
 
 import java.util.*;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "repartidor") // Mapeo a la tabla "repartidor"
+@Table(name = "repartidor")
+@PrimaryKeyJoinColumn(name = "id")
 public class Repartidor extends Usuario {
-    
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected int idRepartidor;  // Cambiado a Long
-    
+    @Column(name = "licencia")
     protected String licencia;
+
+    @Column(name = "vehiculo")
     protected String vehiculo;
-    
-    @OneToMany(mappedBy = "repartidor")  // Relación con Paquete
+
+    @OneToMany(mappedBy = "repartidor")
     private List<Paquete> paquetes = new ArrayList<>();
 
     public Repartidor() {
         super();
     }
 
-	public Repartidor(int idRepartidor, String licencia, String vehiculo, List<Paquete> paquetes) {
+	public Repartidor(int id, String licencia, String vehiculo, List<Paquete> paquetes) {
 		super();
-		this.idRepartidor = idRepartidor;
+		this.id = id;
 		this.licencia = licencia;
 		this.vehiculo = vehiculo;
 		this.paquetes = paquetes;
@@ -40,11 +43,11 @@ public class Repartidor extends Usuario {
 	}
 
 	public int getIdRepartidor() {
-		return idRepartidor;
+		return id;
 	}
 
 	public void setIdRepartidor(int idRepartidor) {
-		this.idRepartidor = idRepartidor;
+		this.id = idRepartidor;
 	}
 
 	public String getLicencia() {
@@ -69,6 +72,14 @@ public class Repartidor extends Usuario {
 
 	public void setPaquetes(List<Paquete> paquetes) {
 		this.paquetes = paquetes;
+	}
+
+	@Override
+	public String toString() {
+		return "Repartidor [licencia=" + licencia + ", vehiculo=" + vehiculo + ", paquetes=" + paquetes + ", id=" + id
+				+ ", nombre=" + nombre + ", apellido=" + apellido + ", run=" + run + ", edad=" + edad + ", direccion="
+				+ direccion + ", correoElectronico=" + correoElectronico + ", numeroTelefonico=" + numeroTelefonico
+				+ ", tipoUsuario=" + tipoUsuario + "]";
 	}
 
     

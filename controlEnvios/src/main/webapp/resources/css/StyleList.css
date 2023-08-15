@@ -1,0 +1,22 @@
+
+        /* Botones de edición */
+        .btn.btn-warning {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        /* Cambio de color al pasar el cursor sobre las filas */
+        tbody tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilo para el botón Cerrar del modal */
+        .close-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        /* Estilo para el modal de actualización */
+        .modal-content {
+            background-color: #f8f9fa;
+        }    

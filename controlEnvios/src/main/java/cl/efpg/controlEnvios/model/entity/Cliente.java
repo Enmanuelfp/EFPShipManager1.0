@@ -1,48 +1,49 @@
 package cl.efpg.controlEnvios.model.entity;
 
 import java.util.*;
+
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cliente") // Mapeo a la tabla "cliente"
+@Table(name = "cliente")
+@PrimaryKeyJoinColumn(name = "id")
 public class Cliente extends Usuario {
-    
-    
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected int idCliente; 
-    
+    @Column(name = "tipoEmpresa")
     protected String tipoEmpresa;
 
-    @OneToMany(mappedBy = "cliente")  // Relación con Paquete
+    @OneToMany(mappedBy = "cliente")
     private List<Paquete> paquetes = new ArrayList<>();
 
     public Cliente() {
         // Constructor vacío
     }
 
-	public Cliente(int idCliente, String tipoEmpresa, List<Paquete> paquetes) {
+	public Cliente(int id, String tipoEmpresa, List<Paquete> paquetes) {
 		super();
-		this.idCliente = idCliente;
+		this.id = id;
 		this.tipoEmpresa = tipoEmpresa;
 		this.paquetes = paquetes;
 	}
 
 	public Cliente(int id, String nombre, String apellido, String run, String edad, String direccion,
-			String correoElectronico, int numeroTelefononico, String tipoUsuario) {
-		super(id, nombre, apellido, run, edad, direccion, correoElectronico, numeroTelefononico, tipoUsuario);
+			String correoElectronico, int numeroTelefonico, String tipoUsuario) {
+		super(id, nombre, apellido, run, edad, direccion, correoElectronico, numeroTelefonico, tipoUsuario);
 		// TODO Auto-generated constructor stub
 	}
 
 	public int getIdCliente() {
-		return idCliente;
+		return id;
 	}
 
 	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
+		this.id = idCliente;
 	}
 
 	public String getTipoEmpresa() {
@@ -63,10 +64,10 @@ public class Cliente extends Usuario {
 
 	@Override
 	public String toString() {
-		return "Cliente [idCliente=" + idCliente + ", tipoEmpresa=" + tipoEmpresa + ", paquetes=" + paquetes + ", id="
+		return "Cliente [idCliente=" + id + ", tipoEmpresa=" + tipoEmpresa + ", paquetes=" + paquetes + ", id="
 				+ id + ", nombre=" + nombre + ", apellido=" + apellido + ", run=" + run + ", edad=" + edad
 				+ ", direccion=" + direccion + ", correoElectronico=" + correoElectronico + ", numeroTelefononico="
-				+ numeroTelefononico + ", tipoUsuario=" + tipoUsuario + "]";
+				+ numeroTelefonico + ", tipoUsuario=" + tipoUsuario + "]";
 	}
 
     

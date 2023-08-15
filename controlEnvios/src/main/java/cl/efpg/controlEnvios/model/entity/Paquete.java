@@ -1,26 +1,31 @@
 package cl.efpg.controlEnvios.model.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "paquete")
+@Table(name = "paquete")
 public class Paquete {
-	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idPaquete")
     private int idPaquete;
-    
+
+    @Column(name = "direccionDestino")
     private String direccionDestino;
-    
+
     @ManyToOne
-    private Cliente cliente;  // Relación con Cliente
-    
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
     @ManyToOne
+    @JoinColumn(name = "repartidor_id")
     private Repartidor repartidor;  // Relación con Repartidor
 
     public Paquete() {

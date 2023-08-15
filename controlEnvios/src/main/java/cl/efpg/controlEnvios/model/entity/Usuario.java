@@ -4,14 +4,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "usuario")
+@Table(name = "usuario")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Usuario {
-	
-	 @Id
-	 @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected int id;
     protected String nombre;
     protected String apellido;
@@ -19,7 +21,7 @@ public class Usuario {
     protected String edad;
     protected String direccion;
     protected String correoElectronico;
-    protected int numeroTelefononico;
+    protected int numeroTelefonico;
     protected String tipoUsuario;
     
     
@@ -29,7 +31,7 @@ public class Usuario {
     
     
 	public Usuario(int id, String nombre, String apellido, String run, String edad, String direccion,
-			String correoElectronico, int numeroTelefononico, String tipoUsuario) {
+			String correoElectronico, int numeroTelefonico, String tipoUsuario) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -38,7 +40,7 @@ public class Usuario {
 		this.edad = edad;
 		this.direccion = direccion;
 		this.correoElectronico = correoElectronico;
-		this.numeroTelefononico = numeroTelefononico;
+		this.numeroTelefonico = numeroTelefonico;
 		this.tipoUsuario = tipoUsuario;
 	}
 
@@ -113,13 +115,13 @@ public class Usuario {
 	}
 
 
-	public int getNumeroTelefononico() {
-		return numeroTelefononico;
+	public int getNumeroTelefonico() {
+		return numeroTelefonico;
 	}
 
 
-	public void setNumeroTelefononico(int numeroTelefononico) {
-		this.numeroTelefononico = numeroTelefononico;
+	public void setNumeroTelefonico(int numeroTelefonico) {
+		this.numeroTelefonico = numeroTelefonico;
 	}
 
 
