@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import cl.efpg.controlEnvios.model.entity.Usuario;
 import cl.efpg.controlEnvios.model.service.ClienteService;
@@ -19,6 +20,7 @@ import cl.efpg.controlEnvios.model.entity.Cliente;
 
 
 @Controller
+
 public class UsuarioController {
 
 	@Autowired
@@ -33,10 +35,10 @@ public class UsuarioController {
 		return new ModelAndView("crearusuario");
 	}
 	
-	@RequestMapping(path ="/listarusuario", method = RequestMethod.GET)
+	@RequestMapping(path ="/listarusuarios", method = RequestMethod.GET)
 	public ModelAndView goListarCliente() {
 		List<Usuario> usuarios = us.getAll();
-			return new ModelAndView("listarusuario","usuarios",usuarios);
+			return new ModelAndView("listarusuarios","usuarios",usuarios);
 	}
 	
 	@RequestMapping(path = "/crearusuario", method = RequestMethod.POST)
@@ -116,6 +118,52 @@ public class UsuarioController {
 	}
 	
 	
+	
+	@RequestMapping(path ="/actualizarusuario", method = RequestMethod.POST)
+    public RedirectView actualizarUsuario(
+            @RequestParam("id") int id,
+            @RequestParam("nombre") String nombreEdit,
+            @RequestParam("apellido") String apellidoEdit,
+            @RequestParam("run") String runEdit,
+            @RequestParam("edad") String edadEdit,
+            @RequestParam("direccion") String direccion,
+            @RequestParam("correoElectronico") String correoElectronicoEdit,
+            @RequestParam("numeroTelefonico") int numeroTelefonico,
+            @RequestParam("tipoUsuario") String tipoUsuarioEdit,
+            @RequestParam("licencia") String licenciaEdit,
+            @RequestParam("vehiculo") String vehiculoEdit,
+            @RequestParam("tipoEmpresa") String tipoEmpresaEdit
+    ) {
+        // Lógica para actualizar los datos del usuario en la base de datos
+        Usuario usuario = us.getOne(id);
+        usuario.setNombre(nombreEdit);
+        usuario.setApellido(apellidoEdit);
+        usuario.setRun(runEdit);
+        usuario.setEdad(edadEdit);
+        usuario.setDireccion(direccion);
+        usuario.setCorreoElectronico(correoElectronicoEdit);
+        usuario.setNumeroTelefonico(numeroTelefonico);
+        usuario.setTipoUsuario(tipoUsuarioEdit);
+
+        if (usuario instanceof Repartidor) {
+            Repartidor repartidor = (Repartidor) usuario;
+            repartidor.setLicencia(licenciaEdit);
+            repartidor.setVehiculo(vehiculoEdit);
+            // ... (configurar otros atributos específicos de Repartidor) ...
+            rs.update(repartidor);
+        } else if (usuario instanceof Cliente) {
+            Cliente cliente = (Cliente) usuario;
+            cliente.setTipoEmpresa(tipoEmpresaEdit);
+            // ... (configurar otros atributos específicos de Cliente) ...
+            cs.update(cliente);
+        } else {
+            // ... (lógica para otros tipos de usuarios) ...
+            us.update(usuario);
+        }
+
+        // Redirigir a la página de listar usuarios después de la actualización
+        return new RedirectView("/controlEnvios/listarusuarios");
+    }
 
 	
 	

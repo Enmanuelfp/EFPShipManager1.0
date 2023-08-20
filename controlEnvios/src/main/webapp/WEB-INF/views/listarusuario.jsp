@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.List" %>
 <%@ page import="cl.efpg.controlEnvios.model.entity.Usuario" %>
+<%@ page import="cl.efpg.controlEnvios.model.entity.Repartidor" %>
+<%@ page import="cl.efpg.controlEnvios.model.entity.Cliente" %>
 <%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
@@ -58,7 +60,10 @@
             <th>Edad</th>                     
             <th>correoElectronico</th>            
             <th>numeroTelefonico</th>
-            <th>tipoUsuario</th>        
+            <th>tipoUsuario</th>  
+            <th>Licencia</th>
+            <th>Vehiculo</th>
+            <th>Tipo de Empresa</th>      
             <th>Editar</th>
         </tr>
     </thead>
@@ -66,20 +71,42 @@
         <%
         @SuppressWarnings("unchecked")
         List<Usuario> usuarios = (List<Usuario>) request.getAttribute("usuarios");
-        for (Usuario u : usuarios) {%>
+        for (Usuario u : usuarios) {
+        %>
         <tr>
-            <td><%=u.getId() %></td>
-            <td><%=u.getNombre()%></td>
-            <td><%=u.getApellido()%></td>
-             <td><%=u.getRun()%></td> 
-            <td><%=u.getEdad()%></td>                        
-            <td><%=u.getCorreoElectronico()%></td>
-            <td><%=u.getTipoUsuario()%></td>        
+            <td><%= u.getId() %></td>
+            <td><%= u.getNombre() %></td>
+            <td><%= u.getApellido() %></td>
+            <td><%= u.getRun() %></td> 
+            <td><%= u.getEdad() %></td>                        
+            <td><%= u.getCorreoElectronico() %></td>
+            <td><%= u.getNumeroTelefonico() %></td>
+            <td><%= u.getTipoUsuario() %></td>
+            
+            <% if (u instanceof Repartidor) {
+                Repartidor repartidor = (Repartidor) u;
+            %>
+            <td><%= repartidor.getLicencia() %></td>
+            <td><%= repartidor.getVehiculo() %></td>
+            <td></td> <!-- Deja en blanco el campo de "Tipo de Empresa" para Repartidores -->
+            <% } else if (u instanceof Cliente) {
+                Cliente cliente = (Cliente) u;
+            %>
+            <td></td> <!-- Deja en blanco los campos de "Licencia" y "Vehiculo" para Clientes -->
+            <td></td>
+            <td><%= cliente.getTipoEmpresa() %></td>
+            <% } else {
+            %>
+            <td></td>
+            <td></td>
+            <td></td>
+            <% } %>
+            
             <td><button class="btn btn-warning">Editar</button></td>
         </tr>
-        <%}%>
+        <% } %>
     </tbody>
-    <!--  <tfoot>
+      <tfoot>
         <tr>
              <th>Id</th>
             <th>Nombre</th>
@@ -101,14 +128,8 @@
 		<div class="modal-wrapper">
 			<div class="modal-content">
 				<form class="modal-form" id="registrationForm"
-					action="actualizarcliente" method="POST">
+					action="actualizarusuario" method="POST">
 					<h3 class="text-center">Actualizar Registro</h3>
-
-					<div class="modal-field">
-						<label for="idusuario">Id Cliente:</label> <input
-							type="text" class="form-control w-75" name="idusuario"
-							id="idusuario" readonly required>
-					</div>
 
 					<div class="modal-field">
 						<label for="nombreCliente">Nombre:</label> <input
@@ -188,15 +209,14 @@
 				</form>
 			</div>
 		</div>
-	</div>-->
-
+	</div>
 
  <!--  <%@ include file='footer.jsp'%>-->	
 
 <script src="${pageContext.request.contextPath}/res/js/ConfirmarModal.js"></script>
-  
+ <script src="${pageContext.request.contextPath}/res/js/StyleJsList.js"></script> 
 
-<script src="${pageContext.request.contextPath}/res/js/StyleJsList.js"></script>
+
 
 
 

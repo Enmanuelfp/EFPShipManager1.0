@@ -5,6 +5,7 @@ import java.util.*;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToMany;
@@ -18,7 +19,7 @@ public class Cliente extends Usuario {
     @Column(name = "tipoEmpresa")
     protected String tipoEmpresa;
 
-    @OneToMany(mappedBy = "cliente")
+    @OneToMany(mappedBy = "cliente", fetch = FetchType.EAGER)
     private List<Paquete> paquetes = new ArrayList<>();
 
     public Cliente() {

@@ -4,6 +4,7 @@ import java.util.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToMany;
@@ -21,7 +22,7 @@ public class Repartidor extends Usuario {
     @Column(name = "vehiculo")
     protected String vehiculo;
 
-    @OneToMany(mappedBy = "repartidor")
+    @OneToMany(mappedBy = "repartidor", fetch = FetchType.EAGER)
     private List<Paquete> paquetes = new ArrayList<>();
 
     public Repartidor() {

@@ -33,7 +33,7 @@
                             <li class="nav-item"><a class="nav-link" href="index">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" href="resume.html">Resumen</a></li>
                             <li class="nav-item"><a class="nav-link" href="proyecto">Proyectos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contactoportafolio">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                                             <h2 class="fw-bolder"><a href="home">EFPShip manager 1.0</a></h2>
                                             <p>Proyecto Java Web 1.0: Gestión Envíos, Repartidores y Clientes. Usando Spring + Hibernate. Estudiante Full Stack con 8 meses de experiencia. Seguridad, interfaz intuitiva y escalabilidad. ¡Emprendimiento de envíos!</p>
                                         </div>
-                                        <img class="img-fluid" src="res/css/img/icono.jpg" alt="..." />
+                                        <img class="img-fluid" src="res/img/icono.jpg" alt="..." />
                                     </div>
                                 </div>
                             </div>

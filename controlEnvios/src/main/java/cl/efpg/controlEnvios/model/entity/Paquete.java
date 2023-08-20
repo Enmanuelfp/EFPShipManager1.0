@@ -2,6 +2,7 @@ package cl.efpg.controlEnvios.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,14 +18,17 @@ public class Paquete {
     @Column(name = "idPaquete")
     private int idPaquete;
 
+    @Column(name = "numeroPaquete")
+    private int numeroPaquete;
+
     @Column(name = "direccionDestino")
     private String direccionDestino;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "repartidor_id")
     private Repartidor repartidor;  // Relación con Repartidor
 
@@ -32,9 +36,10 @@ public class Paquete {
         // Constructor vacío
     }
 
-	public Paquete(int idPaquete, String direccionDestino, Cliente cliente, Repartidor repartidor) {
+	public Paquete(int idPaquete, int numeroPaquete, String direccionDestino, Cliente cliente, Repartidor repartidor) {
 		super();
 		this.idPaquete = idPaquete;
+		this.numeroPaquete = numeroPaquete;
 		this.direccionDestino = direccionDestino;
 		this.cliente = cliente;
 		this.repartidor = repartidor;
@@ -46,6 +51,14 @@ public class Paquete {
 
 	public void setIdPaquete(int idPaquete) {
 		this.idPaquete = idPaquete;
+	}
+
+	public int getNumeroPaquete() {
+		return numeroPaquete;
+	}
+
+	public void setNumeroPaquete(int numeroPaquete) {
+		this.numeroPaquete = numeroPaquete;
 	}
 
 	public String getDireccionDestino() {
@@ -74,15 +87,7 @@ public class Paquete {
 
 	@Override
 	public String toString() {
-		return "Paquete [idPaquete=" + idPaquete + ", direccionDestino=" + direccionDestino + ", cliente=" + cliente
-				+ ", repartidor=" + repartidor + "]";
+		return "Paquete [idPaquete=" + idPaquete + ", numeroPaquete=" + numeroPaquete + ", direccionDestino=" + direccionDestino
+				+ ", cliente=" + cliente + ", repartidor=" + repartidor + "]";
 	}
-
-    
 }
-
-	
-	
-	
-
-
