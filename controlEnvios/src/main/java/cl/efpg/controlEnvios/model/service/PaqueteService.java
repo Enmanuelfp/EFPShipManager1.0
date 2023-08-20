@@ -36,4 +36,8 @@ public class PaqueteService {
 	public void delete(int id) {
 		pRepo.delete(pRepo.getOne(id));
 	}
+
+	public Paquete getByNumeroPaquete(int numeroPaquete) {
+        return pRepo.findByNumeroPaquete(numeroPaquete);
+    }
 }

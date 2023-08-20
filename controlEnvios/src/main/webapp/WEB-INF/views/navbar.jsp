@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -15,7 +16,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <!-- Logo o nombre de la empresa a la izquierda -->
-    
     <a class="navbar-brand" href="home">EFPShipManager1.0</a>
 
     <!-- Botón que aparecerá en dispositivos pequeños para desplegar el menú -->
@@ -27,18 +27,32 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Elementos del menú a la derecha -->
       <ul class="navbar-nav ml-auto">
+       <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="opcionesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Listar
+            </a>
+            <div class="dropdown-menu" aria-labelledby="opcionesDropdown">
+                <a class="dropdown-item" href="listarusuarios">Usuarios</a>
+                <a class="dropdown-item" href="listarpaquetes">Paquetes</a>
+            </div>
+        </li>
+      <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="opcionesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Crear
+            </a>
+            <div class="dropdown-menu" aria-labelledby="opcionesDropdown">
+                <a class="dropdown-item" href="crearusuario">Usuario</a>
+                <a class="dropdown-item" href="crearpaquete">Paquete</a>
+            </div>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="index">Volver al portafolio </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contacto">Contacto</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Registro</a>
-        </li>
+        
+        
       </ul>
     </div>
   </div>
