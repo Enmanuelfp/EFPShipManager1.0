@@ -40,7 +40,7 @@
 								placeholder="Número de Paquete">
 						</div>
 						<div class="mb-3">
-							<label for="repartidor" class="form-label">Repartidor</label> <select
+							<label for="repartidor" class="form-label">Cliente</label> <select
 								class="formulario__input form-control form-control-sm"
 								name="cliente" id="cliente">
 								<option value="" disabled selected>Selecciona un
@@ -53,7 +53,7 @@
 
 						</div>
 						<div class="mb-3">
-							<label for="cliente" class="form-label">Cliente</label> <select
+							<label for="cliente" class="form-label">Repartidor</label> <select
 								class="formulario__input form-control form-control-sm"
 								name="repartidor" id="repartidor">
 								<option value="" disabled selected>Selecciona un
