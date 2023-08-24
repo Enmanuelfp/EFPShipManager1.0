@@ -84,18 +84,6 @@ public class HomeController {
 		
     }
     
-    @RequestMapping(path = "/contacto", method = RequestMethod.GET)
-    public ModelAndView goContacto() {  
-
-        return new ModelAndView("contacto");
-		
-    }
-    
-    @RequestMapping(path = "/contactoportafolio", method = RequestMethod.GET)
-    public ModelAndView goContactoPortafolio() {  
-
-        return new ModelAndView("contactoportafolio");
-		
-    }
+   
 
 }

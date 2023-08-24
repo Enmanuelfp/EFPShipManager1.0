@@ -31,7 +31,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><a class="nav-link" href="index">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resumen</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://cl.linkedin.com/in/enmanuel-p%C3%A9rez-garc%C3%ADa-55a524260?trk=people-guest_people_search-card">Resumen</a></li>
                             <li class="nav-item"><a class="nav-link" href="proyecto">Proyectos</a></li>
                             <li class="nav-item"><a class="nav-link" href="contactoportafolio">Contacto</a></li>
                         </ul>
@@ -78,8 +78,8 @@
             <section class="py-5 bg-gradient-primary-to-secondary text-white">
                 <div class="container px-5 my-5">
                     <div class="text-center">
-                        <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contactame</a>
+                        <h2 class="display-4 fw-bolder mb-4">Construyamos Algo Juntos!</h2>
+                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contactoportafolio">Contactame</a>
                     </div>
                 </div>
             </section>

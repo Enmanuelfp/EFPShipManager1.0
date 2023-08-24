@@ -46,8 +46,8 @@
 								<option value="" disabled selected>Selecciona un
 									cliente</option>
 								<c:forEach items="${clientes}" var="clienteItem">
-									<option value="${clienteItem.id}">${clienteItem.nombre}
-										${clienteItem.apellido}</option>
+									<option value="${clienteItem.id}">${clienteItem.tipoEmpresa}
+										</option>
 								</c:forEach>
 							</select>
 

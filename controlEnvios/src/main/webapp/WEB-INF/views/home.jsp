@@ -19,7 +19,14 @@
         <div class="container">
             <h1 class="display-3">Sistema de Control de Envíos</h1>
             <p class="lead">Optimización logística para tu negocio</p>
-            <a href="login" class="btn btn-primary btn-lg">Empezar</a>
+            <p class="lead">ESTE PROYECTO SIGUE EN CONSTANTE ACTUALIZACION</p>
+            <p class="lead">FUNCIONE ACTIVAS:</p>
+            <p class="lead">Crear Paquete</p>
+            <p class="lead">Crear Usuario</p>
+            <p class="lead">Listar Paquetes</p>
+            <p class="lead">Listar Usuarios</p>
+            <p class="lead">Formulario De Contacto</p>
+            <a href="crearusuario" class="btn btn-primary btn-lg">Empezar</a>
         </div>
     </header>
 

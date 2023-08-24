@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/login.css">
 </head>
 <body>
-<%@include file = "navbar.jsp" %>
+<%@include file = "navbar2.jsp" %>
 
   <div class="container">
     <div class="row">

@@ -88,7 +88,6 @@
 										Usuario</label> <select
 										class="formulario__input form-control form-control-sm"
 										name="tipoUsuario" id="tipoUsuarioSelect">
-										<option value="Usuario">Usuario</option>
 										<option value="Repartidor">Repartidor</option>
 										<option value="Cliente">Cliente</option>
 									</select>

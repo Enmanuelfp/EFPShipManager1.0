@@ -37,7 +37,7 @@
           <a class="nav-link" href="login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Registro</a>
+          <a class="nav-link" href="crearpaquete">Crear Paquete</a>
         </li>
       </ul>
     </div>
